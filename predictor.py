@@ -6,7 +6,6 @@ import torch
 import pandas as pd
 from datetime import datetime
 from scraper import CBBStatsScraper
-from historical_data import TournamentHistoryScraper
 from seed_analysis import SeedAnalyzer
 
 class MarchMadnessPredictor:
@@ -19,22 +18,17 @@ class MarchMadnessPredictor:
         
         # Initialize the scrapers and analyzers
         self.stats_scraper = CBBStatsScraper()
-        self.history_scraper = TournamentHistoryScraper()
         self.seed_analyzer = SeedAnalyzer()
         
         print("Loading current season statistics...")
         self.team_stats = self._load_current_stats()
         
-        print("Loading historical tournament data...")
-        self.historical_data = self.history_scraper.get_historical_data()
-        
         print("Analyzing seed performance...")
         self._initialize_seed_analysis()
 
     def _initialize_seed_analysis(self) -> None:
-        """Initialize seed analysis from historical tournament data."""
-        if not self.seed_analyzer.load_cache():
-            self.seed_analyzer.analyze_tournament_data(self.historical_data['tournaments'])
+        """Initialize seed analysis using cached seed data."""
+        self.seed_analyzer.load_cache()
 
     def _load_current_stats(self) -> Dict:
         """Load current team statistics using the scraper."""
@@ -48,11 +42,9 @@ class MarchMadnessPredictor:
             return cached_stats
 
     def _create_game_prompt(self, team1: str, team2: str, seed1: int = None, seed2: int = None) -> str:
-        """Create a prompt for the model based on team statistics, historical performance, and seeds."""
+        """Create a prompt for the model based on team statistics and seeds."""
         stats1 = self.team_stats.get(team1, {})
         stats2 = self.team_stats.get(team2, {})
-        hist1 = self.historical_data['team_stats'].get(team1, {})
-        hist2 = self.historical_data['team_stats'].get(team2, {})
         
         seed_info = ""
         if seed1 is not None and seed2 is not None:
@@ -85,13 +77,6 @@ class MarchMadnessPredictor:
         - Strength of Schedule: {stats1.get('sos', 'N/A')}
         - Simple Rating System: {stats1.get('srs', 'N/A')}
         
-        {team1} Historical Tournament Performance:
-        - Tournament Appearances: {hist1.get('appearances', 0)}
-        - Tournament Win Rate: {hist1.get('win_rate', 0):.3f}
-        - Championships: {hist1.get('championships', 0)}
-        - Final Fours: {hist1.get('final_fours', 0)}
-        - Upset Win Rate: {hist1.get('upset_rate', 0):.3f}
-        
         {team2} Current Season Stats:
         - Win Rate: {stats2.get('win_rate', 'N/A')}
         - Points Per Game: {stats2.get('points_per_game', 'N/A')}
@@ -100,13 +85,6 @@ class MarchMadnessPredictor:
         - Defensive Rating: {stats2.get('defensive_rating', 'N/A')}
         - Strength of Schedule: {stats2.get('sos', 'N/A')}
         - Simple Rating System: {stats2.get('srs', 'N/A')}
-        
-        {team2} Historical Tournament Performance:
-        - Tournament Appearances: {hist2.get('appearances', 0)}
-        - Tournament Win Rate: {hist2.get('win_rate', 0):.3f}
-        - Championships: {hist2.get('championships', 0)}
-        - Final Fours: {hist2.get('final_fours', 0)}
-        - Upset Win Rate: {hist2.get('upset_rate', 0):.3f}
         
         {seed_info}
         """
@@ -124,24 +102,12 @@ class MarchMadnessPredictor:
         stats1 = self.team_stats.get(team1, {})
         stats2 = self.team_stats.get(team2, {})
         
-        # Get historical tournament performance
-        hist1 = self.historical_data['team_stats'].get(team1, {})
-        hist2 = self.historical_data['team_stats'].get(team2, {})
-        
-        # Calculate current season rating difference (30%)
+        # Calculate current season rating difference (50%)
         current_rating_diff = (
-            (stats1.get('srs', 0) - stats2.get('srs', 0)) * 0.15 +  # SRS weight
-            (stats1.get('win_rate', 0) - stats2.get('win_rate', 0)) * 0.1 +  # Win rate weight
-            (stats1.get('offensive_rating', 0) - stats2.get('offensive_rating', 0)) * 0.025 +  # Offensive rating weight
-            (stats2.get('defensive_rating', 0) - stats1.get('defensive_rating', 0)) * 0.025  # Defensive rating weight
-        )
-        
-        # Calculate historical tournament performance difference (20%)
-        historical_diff = (
-            (hist1.get('win_rate', 0) - hist2.get('win_rate', 0)) * 0.08 +  # Tournament win rate
-            (hist1.get('championship_rate', 0) - hist2.get('championship_rate', 0)) * 0.05 +  # Championship success
-            (hist1.get('final_four_rate', 0) - hist2.get('final_four_rate', 0)) * 0.04 +  # Final Four success
-            (hist1.get('upset_rate', 0) - hist2.get('upset_rate', 0)) * 0.03  # Upset factor
+            (stats1.get('srs', 0) - stats2.get('srs', 0)) * 0.25 +  # SRS weight
+            (stats1.get('win_rate', 0) - stats2.get('win_rate', 0)) * 0.15 +  # Win rate weight
+            (stats1.get('offensive_rating', 0) - stats2.get('offensive_rating', 0)) * 0.05 +  # Offensive rating weight
+            (stats2.get('defensive_rating', 0) - stats1.get('defensive_rating', 0)) * 0.05  # Defensive rating weight
         )
         
         # Calculate seed-based probability difference (50%)
@@ -166,7 +132,7 @@ class MarchMadnessPredictor:
                 seed_diff -= (upset_prob - 0.5) * 0.1
         
         # Combine all factors
-        total_rating_diff = current_rating_diff + historical_diff + seed_diff
+        total_rating_diff = current_rating_diff + seed_diff
         
         # Convert rating difference to win probability using sigmoid function
         win_prob = 1 / (1 + torch.exp(-torch.tensor(total_rating_diff)))
@@ -177,37 +143,57 @@ class MarchMadnessPredictor:
         
         return winner, confidence
 
-    def predict_bracket(self, bracket_teams: List[List[str]], seeds: List[int] = None) -> List[str]:
+    def predict_bracket(self, bracket_teams: List[str], seeds: List[int] = None) -> List[str]:
         """
-        Predict the entire tournament bracket.
-        bracket_teams should be a list of lists, representing each round's matchups.
-        seeds should be a list of seeds corresponding to bracket_teams.
+        Predict the winners of all games in a tournament bracket.
+        Returns a list of results for each round.
         """
         results = []
-        current_round = bracket_teams
-        current_seeds = seeds if seeds else [None] * len(bracket_teams)
         
+        # Initialize the current round teams and seeds
+        current_round = bracket_teams.copy()
+        current_seeds = seeds.copy() if seeds else [None] * len(bracket_teams)
+        
+        # Simulate each round
         while len(current_round) > 1:
-            next_round = []
-            next_seeds = []
             round_name = self._get_round_name(len(current_round))
             results.append(f"\n{round_name}:")
             
-            for i in range(0, len(current_round), 2):
-                team1, team2 = current_round[i], current_round[i + 1]
-                seed1 = current_seeds[i] if current_seeds else None
-                seed2 = current_seeds[i + 1] if current_seeds else None
-                
-                winner, confidence = self.predict_game(team1, team2, seed1, seed2, round_name)
-                next_round.append(winner)
-                next_seeds.append(seed1 if winner == team1 else seed2)
-                
-                # Add prediction context
-                matchup_note = self._get_matchup_note(team1, team2, seed1, seed2, round_name)
-                results.append(f"{team1} ({seed1 if seed1 else 'N/A'}) vs {team2} ({seed2 if seed2 else 'N/A'}): {winner} wins ({confidence:.1%} confidence)")
-                if matchup_note:
-                    results.append(f"Note: {matchup_note}")
+            next_round = []
+            next_seeds = []
             
+            # Process each matchup in the current round
+            for i in range(0, len(current_round), 2):
+                if i + 1 < len(current_round):
+                    team1 = current_round[i]
+                    team2 = current_round[i + 1]
+                    seed1 = current_seeds[i] if current_seeds else None
+                    seed2 = current_seeds[i + 1] if current_seeds else None
+                    
+                    winner, confidence = self.predict_game(team1, team2, seed1, seed2, round_name)
+                    
+                    # Format the result with detailed matchup analysis
+                    seed1_display = f"({seed1})" if seed1 is not None else ""
+                    seed2_display = f"({seed2})" if seed2 is not None else ""
+                    result_str = f"{team1} {seed1_display} vs {team2} {seed2_display}: {winner} wins ({confidence:.1%} confidence)"
+                    
+                    # Add any special notes about the matchup
+                    matchup_note = self._get_matchup_note(team1, team2, seed1, seed2, round_name)
+                    if matchup_note:
+                        result_str += f" - {matchup_note}"
+                    
+                    results.append(result_str)
+                    
+                    # Add the winner to the next round
+                    next_round.append(winner)
+                    next_seeds.append(seed1 if winner == team1 else seed2)
+                else:
+                    # Odd number of teams, this team gets a bye
+                    next_round.append(current_round[i])
+                    if current_seeds:
+                        next_seeds.append(current_seeds[i])
+            
+            # Update for the next round
             current_round = next_round
             current_seeds = next_seeds
         
@@ -215,24 +201,17 @@ class MarchMadnessPredictor:
             results.append("\nNational Champion:")
             champion = current_round[0]
             champion_seed = current_seeds[0] if current_seeds else None
-            hist_champ = self.historical_data['team_stats'].get(champion, {})
             seed_stats = self.seed_analyzer.get_seed_metrics(champion_seed) if champion_seed else {}
             
-            results.append(f"{champion} (#{champion_seed if champion_seed else 'N/A'}) 🏆")
-            results.append(f"Previous Championships: {hist_champ.get('championships', 0)}")
+            results.append(f"{champion} (#{champion_seed if champion_seed else 'N/A'}) [CHAMPION]")
             if champion_seed:
                 results.append(f"Seed #{champion_seed} Championship Rate: {seed_stats.get('championship_rate', 0):.1%}")
         
         return results
 
     def _get_matchup_note(self, team1: str, team2: str, seed1: int = None, seed2: int = None, round_name: str = None) -> str:
-        """Generate a note about the matchup including historical and seed-based context."""
+        """Generate a note about the matchup including seed-based context."""
         notes = []
-        
-        # Add historical tournament context
-        hist_note = self._get_historical_matchup_note(team1, team2, round_name)
-        if hist_note:
-            notes.append(hist_note)
         
         # Add seed-based context
         if seed1 is not None and seed2 is not None:
@@ -255,28 +234,6 @@ class MarchMadnessPredictor:
                     better_seed = seed1 if seed1_round_prob > seed2_round_prob else seed2
                     better_prob = max(seed1_round_prob, seed2_round_prob)
                     notes.append(f"#{better_seed} seeds have historically performed well in the {round_name} ({better_prob:.1%} win rate)")
-        
-        return " | ".join(notes) if notes else ""
-
-    def _get_historical_matchup_note(self, team1: str, team2: str, round_name: str) -> str:
-        """Generate a note about historical tournament performance for this matchup."""
-        hist1 = self.historical_data['team_stats'].get(team1, {})
-        hist2 = self.historical_data['team_stats'].get(team2, {})
-        
-        notes = []
-        
-        # Add championship history if in later rounds
-        if round_name in ["Championship Game", "Final Four", "Elite Eight"]:
-            if hist1.get('championships', 0) > 0:
-                notes.append(f"{team1} has {hist1['championships']} previous championships")
-            if hist2.get('championships', 0) > 0:
-                notes.append(f"{team2} has {hist2['championships']} previous championships")
-        
-        # Add upset potential
-        if hist1.get('upset_rate', 0) > 0.3:
-            notes.append(f"{team1} has strong upset history ({hist1['upset_rate']:.1%} upset rate)")
-        if hist2.get('upset_rate', 0) > 0.3:
-            notes.append(f"{team2} has strong upset history ({hist2['upset_rate']:.1%} upset rate)")
         
         return " | ".join(notes) if notes else ""
 

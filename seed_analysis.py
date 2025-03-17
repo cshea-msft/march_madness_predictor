@@ -16,9 +16,37 @@ class SeedAnalyzer:
         )
         self.logger = logging.getLogger(__name__)
 
-    def analyze_tournament_data(self, tournament_data: List[Dict]) -> None:
-        """Analyze tournament data to calculate seed-based statistics."""
-        # Initialize seed stats
+    def load_cache(self) -> bool:
+        """Load seed analysis data from cache."""
+        try:
+            with open(self.cache_file, 'r') as f:
+                data = json.load(f)
+                
+            self.seed_stats = data.get('seed_stats', {})
+            self.matchup_stats = data.get('matchup_stats', {})
+            
+            # Convert string keys to integers for seed_stats
+            self.seed_stats = {int(k): v for k, v in self.seed_stats.items()}
+            
+            if not self.seed_stats or not self.matchup_stats:
+                self.logger.warning("Loaded cache is incomplete, initializing with default values")
+                self._initialize_defaults()
+                return False
+                
+            self.logger.info("Successfully loaded seed analysis from cache")
+            return True
+        except FileNotFoundError:
+            self.logger.warning("Cache file not found, initializing with default values")
+            self._initialize_defaults()
+            return False
+        except Exception as e:
+            self.logger.error(f"Error loading cache: {str(e)}")
+            self._initialize_defaults()
+            return False
+
+    def _initialize_defaults(self):
+        """Initialize default seed statistics based on historical trends."""
+        # Set up basic seed stats based on general historical performance
         self.seed_stats = {i: {
             'wins': 0,
             'losses': 0,
@@ -34,94 +62,67 @@ class SeedAnalyzer:
             'championships': 0,
             'final_fours': 0,
             'elite_eights': 0,
-            'sweet_sixteens': 0
+            'sweet_sixteens': 0,
+            'win_rate': 0.7 - ((i-1) * 0.04),  # Approximate win rate that decreases by seed
+            'championship_rate': max(0, 0.2 - ((i-1) * 0.02)),  # Higher seeds have better championship odds
+            'final_four_rate': max(0, 0.3 - ((i-1) * 0.025)),  # Higher seeds have better Final Four odds
+            'elite_eight_rate': max(0, 0.4 - ((i-1) * 0.03)),  # Higher seeds have better Elite Eight odds
+            'sweet_sixteen_rate': max(0, 0.5 - ((i-1) * 0.035))  # Higher seeds have better Sweet Sixteen odds
         } for i in range(1, 17)}  # Seeds 1-16
 
         # Initialize matchup stats
         self.matchup_stats = {}
         for i in range(1, 17):
             for j in range(1, 17):
+                # Higher seeds generally have advantage over lower seeds
+                win_prob = 0.5
+                if i < j:  # i is higher seed (lower number)
+                    win_prob = 0.5 + ((j - i) * 0.05)  # Advantage increases with seed difference
+                elif i > j:  # i is lower seed (higher number)
+                    win_prob = 0.5 - ((i - j) * 0.05)  # Disadvantage increases with seed difference
+                
+                # Some well-known upset patterns
+                if i == 12 and j == 5:
+                    win_prob = 0.35  # 12 seeds have historically done well against 5 seeds
+                elif i == 11 and j == 6:
+                    win_prob = 0.4  # 11 seeds often upset 6 seeds
+                elif i == 10 and j == 7:
+                    win_prob = 0.45  # 10-7 matchups are often close
+                elif i == 9 and j == 8:
+                    win_prob = 0.5  # 9-8 matchups are essentially toss-ups
+                
+                win_prob = min(0.95, max(0.05, win_prob))  # Cap probabilities
+                
                 self.matchup_stats[f"{i}-{j}"] = {
                     'wins': 0,
-                    'total': 0
+                    'total': 0,
+                    'win_probability': win_prob
                 }
-
-        # Process each game
-        for game in tournament_data:
-            winner_seed = game['winner_seed']
-            loser_seed = game['loser_seed']
-            round_name = game['round']
-
-            if winner_seed == 0 or loser_seed == 0:
-                continue  # Skip games with unknown seeds
-
-            # Update seed stats
-            self._update_seed_stats(winner_seed, loser_seed, round_name)
-            
-            # Update matchup stats
-            self._update_matchup_stats(winner_seed, loser_seed)
-
-        # Calculate advanced metrics
-        self._calculate_advanced_metrics()
-        
-        # Save to cache
+                
+        # Save the default values to cache
         self._save_cache()
 
-    def _update_seed_stats(self, winner_seed: int, loser_seed: int, round_name: str) -> None:
-        """Update statistics for individual seeds."""
-        # Update winner stats
-        self.seed_stats[winner_seed]['wins'] += 1
-        self.seed_stats[winner_seed]['games'] += 1
-        self.seed_stats[winner_seed]['round_wins'][round_name] += 1
-
-        # Update specific achievement counts
-        if round_name == 'Championship':
-            self.seed_stats[winner_seed]['championships'] += 1
-        elif round_name == 'Final Four':
-            self.seed_stats[winner_seed]['final_fours'] += 1
-        elif round_name == 'Elite Eight':
-            self.seed_stats[winner_seed]['elite_eights'] += 1
-        elif round_name == 'Sweet Sixteen':
-            self.seed_stats[winner_seed]['sweet_sixteens'] += 1
-
-        # Update loser stats
-        self.seed_stats[loser_seed]['losses'] += 1
-        self.seed_stats[loser_seed]['games'] += 1
-
-    def _update_matchup_stats(self, winner_seed: int, loser_seed: int) -> None:
-        """Update head-to-head matchup statistics."""
-        matchup_key = f"{winner_seed}-{loser_seed}"
-        reverse_key = f"{loser_seed}-{winner_seed}"
-
-        self.matchup_stats[matchup_key]['wins'] += 1
-        self.matchup_stats[matchup_key]['total'] += 1
-        self.matchup_stats[reverse_key]['total'] += 1
-
-    def _calculate_advanced_metrics(self) -> None:
-        """Calculate advanced metrics for seeds and matchups."""
-        # Calculate seed performance metrics
-        for seed in self.seed_stats:
-            stats = self.seed_stats[seed]
-            games = stats['games']
-            if games > 0:
-                stats['win_rate'] = stats['wins'] / games
-                stats['championship_rate'] = stats['championships'] / games
-                stats['final_four_rate'] = stats['final_fours'] / games
-                stats['elite_eight_rate'] = stats['elite_eights'] / games
-                stats['sweet_sixteen_rate'] = stats['sweet_sixteens'] / games
-
-        # Calculate matchup probabilities
-        for matchup in self.matchup_stats:
-            stats = self.matchup_stats[matchup]
-            if stats['total'] > 0:
-                stats['win_probability'] = stats['wins'] / stats['total']
+    def _save_cache(self) -> None:
+        """Save seed analysis data to cache."""
+        data = {
+            'seed_stats': self.seed_stats,
+            'matchup_stats': self.matchup_stats,
+            'last_updated': datetime.now().isoformat()
+        }
+        
+        try:
+            with open(self.cache_file, 'w') as f:
+                json.dump(data, f, indent=2)
+            self.logger.info("Seed analysis data saved to cache")
+        except Exception as e:
+            self.logger.error(f"Error saving cache: {str(e)}")
 
     def get_seed_win_probability(self, seed1: int, seed2: int) -> float:
         """Get the historical probability of seed1 beating seed2."""
         matchup_key = f"{seed1}-{seed2}"
         stats = self.matchup_stats.get(matchup_key, {})
         
-        if stats.get('total', 0) > 0:
+        if stats and 'win_probability' in stats:
             return stats['win_probability']
         
         # If no direct matchup data, use relative seed strength
@@ -134,18 +135,27 @@ class SeedAnalyzer:
         if seed1_win_rate + seed2_win_rate > 0:
             return seed1_win_rate / (seed1_win_rate + seed2_win_rate)
         
-        # If no historical data, use seed difference
+        # If no win rate data, use seed difference
         return 1 - (seed1 / (seed1 + seed2))
 
     def get_seed_round_probability(self, seed: int, round_name: str) -> float:
         """Get the historical probability of a seed reaching/winning in a specific round."""
         stats = self.seed_stats.get(seed, {})
-        round_wins = stats.get('round_wins', {}).get(round_name, 0)
-        games = stats.get('games', 0)
         
-        if games > 0:
-            return round_wins / games
-        return 0
+        if round_name == "First Round":
+            return stats.get('win_rate', 0.5)
+        elif round_name == "Second Round":
+            return stats.get('sweet_sixteen_rate', 0.3)
+        elif round_name == "Sweet Sixteen":
+            return stats.get('elite_eight_rate', 0.2)
+        elif round_name == "Elite Eight":
+            return stats.get('final_four_rate', 0.1)
+        elif round_name == "Final Four":
+            return stats.get('championship_rate', 0.05)
+        elif round_name == "Championship Game":
+            return max(0.01, stats.get('championship_rate', 0.05) * 0.5)
+            
+        return 0.1  # Default value for unknown rounds
 
     def get_seed_metrics(self, seed: int) -> Dict:
         """Get all metrics for a specific seed."""
@@ -159,42 +169,48 @@ class SeedAnalyzer:
         matchup_key = f"{higher_seed}-{lower_seed}"
         stats = self.matchup_stats.get(matchup_key, {})
         
-        if stats.get('total', 0) > 0:
+        if stats and 'win_probability' in stats:
             return stats['win_probability']
         
-        # If no direct matchup data, use historical upset rates
-        higher_stats = self.seed_stats.get(higher_seed, {})
-        upset_games = sum(1 for m, s in self.matchup_stats.items() 
-                         if int(m.split('-')[0]) == higher_seed and 
-                         int(m.split('-')[1]) < higher_seed and 
-                         s['wins'] > 0)
-        total_games = higher_stats.get('games', 0)
+        # If no direct matchup data, calculate based on seed difference
+        seed_diff = higher_seed - lower_seed
+        base_upset_prob = 0.2  # Base upset probability
         
-        return upset_games / total_games if total_games > 0 else 0.1  # Default 10% upset chance
+        # Well-known upset seeds get a boost
+        if higher_seed == 12 and lower_seed == 5:
+            return 0.35  # 12 over 5 is a common upset
+        elif higher_seed == 11 and lower_seed == 6:
+            return 0.32  # 11 over 6 is fairly common
+        elif higher_seed == 10 and lower_seed == 7:
+            return 0.4  # 10 over 7 happens often
+        elif higher_seed == 9 and lower_seed == 8:
+            return 0.5  # 9-8 is essentially a toss-up
+            
+        # For other matchups, probability decreases as seed difference increases
+        return max(0.05, base_upset_prob - (seed_diff * 0.01))
 
-    def _save_cache(self) -> None:
-        """Save analysis results to cache file."""
-        try:
-            cache_data = {
-                'seed_stats': self.seed_stats,
-                'matchup_stats': self.matchup_stats,
-                'last_updated': datetime.now().isoformat()
-            }
-            with open(self.cache_file, 'w') as f:
-                json.dump(cache_data, f, indent=2)
-        except Exception as e:
-            self.logger.error(f"Error saving seed analysis cache: {str(e)}")
+def main():
+    analyzer = SeedAnalyzer()
+    analyzer.load_cache()
+    
+    # Print some example probabilities
+    print("Seed matchup win probabilities:")
+    print(f"1 seed vs 16 seed: {analyzer.get_seed_win_probability(1, 16):.1%}")
+    print(f"8 seed vs 9 seed: {analyzer.get_seed_win_probability(8, 9):.1%}")
+    print(f"5 seed vs 12 seed: {analyzer.get_seed_win_probability(5, 12):.1%}")
+    
+    # Print some upset probabilities
+    print("\nUpset probabilities:")
+    print(f"12 seed over 5 seed: {analyzer.get_upset_probability(12, 5):.1%}")
+    print(f"11 seed over 6 seed: {analyzer.get_upset_probability(11, 6):.1%}")
+    print(f"16 seed over 1 seed: {analyzer.get_upset_probability(16, 1):.1%}")
+    
+    # Print round probabilities
+    print("\nRound advancement probabilities for a 1 seed:")
+    seed = 1
+    for round_name in ["First Round", "Second Round", "Sweet Sixteen", "Elite Eight", "Final Four", "Championship Game"]:
+        prob = analyzer.get_seed_round_probability(seed, round_name)
+        print(f"{round_name}: {prob:.1%}")
 
-    def load_cache(self) -> bool:
-        """Load analysis results from cache file."""
-        try:
-            with open(self.cache_file, 'r') as f:
-                cache_data = json.load(f)
-                self.seed_stats = cache_data['seed_stats']
-                self.matchup_stats = cache_data['matchup_stats']
-                return True
-        except FileNotFoundError:
-            return False
-        except Exception as e:
-            self.logger.error(f"Error loading seed analysis cache: {str(e)}")
-            return False 
+if __name__ == "__main__":
+    main() 
