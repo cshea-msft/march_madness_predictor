@@ -32,4 +32,7 @@ ENV/
 
 # OS specific files
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# Large model file
+fine_tuned_model/model.safetensors 
