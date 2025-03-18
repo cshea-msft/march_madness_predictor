@@ -1,0 +1,132 @@
+2025 NCAA TOURNAMENT PREDICTIONS
+=============================
+
+REGION WINNERS
+-------------
+South Region: Auburn (1)
+East Region: Duke (1)
+West Region: Florida (1)
+Midwest Region: Houston (1)
+
+FINAL FOUR
+----------
+Semifinal 1: Auburn (1) vs Duke (1)
+Winner: Auburn (62.2% confidence)
+
+Semifinal 2: Florida (1) vs Houston (1)
+Winner: Houston (97.1% confidence)
+
+NATIONAL CHAMPIONSHIP
+-------------------
+Auburn (1) vs Houston (1)
+Winner: Houston (76.1% confidence)
+
+DETAILED ROUND-BY-ROUND PREDICTIONS
+=================================
+
+SOUTH REGION
+-----------
+First Round:
+- Auburn (1) def. Grambling (16) - 100.0% confidence
+- Creighton (9) def. Louisville (8) - 99.8% confidence
+- Michigan (5) def. UC San Diego (12) - 76.3% confidence
+- Texas A&M (4) def. Yale (13) - 95.4% confidence
+- Virginia (11) def. Ole Miss (6) - 96.4% confidence
+- Iowa State (3) def. Lipscomb (14) - 100.0% confidence
+- Marquette (7) def. New Mexico (10) - 80.8% confidence
+- Michigan State (2) def. Bryant (15) - 99.9% confidence
+
+Second Round:
+- Auburn (1) def. Creighton (9) - 71.4% confidence
+- Texas A&M (4) def. Michigan (5) - 93.5% confidence
+- Iowa State (3) def. Virginia (11) - 98.2% confidence
+- Marquette (7) def. Michigan State (2) - 59.0% confidence
+
+Sweet Sixteen:
+- Auburn (1) def. Texas A&M (4) - 71.2% confidence
+- Iowa State (3) def. Marquette (7) - 98.2% confidence
+
+Elite Eight:
+- Auburn (1) def. Iowa State (3) - 71.2% confidence
+
+EAST REGION
+----------
+First Round:
+- Duke (1) def. Merrimack (16) - 100.0% confidence
+- Baylor (9) def. Mississippi State (8) - 85.0% confidence
+- Oregon (5) def. Liberty (12) - 97.2% confidence
+- Arizona (4) def. Akron (13) - 99.9% confidence
+- BYU (6) def. VCU (11) - 52.6% confidence
+- Wisconsin (3) def. Montana (14) - 99.7% confidence
+- Saint Mary's (CA) (7) def. Vanderbilt (10) - 99.5% confidence
+- Alabama (2) def. Robert Morris (15) - 100.0% confidence
+
+Second Round:
+- Duke (1) def. Baylor (9) - 64.3% confidence
+- Arizona (4) def. Oregon (5) - 98.0% confidence
+- Wisconsin (3) def. BYU (6) - 99.5% confidence
+- Alabama (2) def. Saint Mary's (CA) (7) - 80.3% confidence
+
+Sweet Sixteen:
+- Duke (1) def. Arizona (4) - 64.1% confidence
+- Alabama (2) def. Wisconsin (3) - 80.2% confidence
+
+Elite Eight:
+- Duke (1) def. Alabama (2) - 64.1% confidence
+
+WEST REGION
+----------
+First Round:
+- Florida (1) def. Norfolk State (16) - 99.9% confidence
+- Oklahoma (9) def. UConn (8) - 99.1% confidence
+- Colorado State (12) def. Memphis (5) - 78.5% confidence
+- Maryland (4) def. Grand Canyon (13) - 55.7% confidence
+- Drake (11) def. Missouri (6) - 91.8% confidence
+- Texas Tech (3) def. UNC Wilmington (14) - 99.0% confidence
+- Kansas (7) def. Arkansas (10) - 96.6% confidence
+- Saint John's (NY) (2) def. Omaha (15) - 93.0% confidence
+
+Second Round:
+- Florida (1) def. Oklahoma (9) - 58.0% confidence
+- Colorado State (12) def. Maryland (4) - 67.9% confidence
+- Texas Tech (3) def. Drake (11) - 81.0% confidence
+- Kansas (7) def. Saint John's (NY) (2) - 99.4% confidence
+
+Sweet Sixteen:
+- Florida (1) def. Colorado State (12) - 57.8% confidence
+- Kansas (7) def. Texas Tech (3) - 99.4% confidence
+
+Elite Eight:
+- Florida (1) def. Kansas (7) - 57.8% confidence
+
+MIDWEST REGION
+-------------
+First Round:
+- Houston (1) def. SIU Edwardsville (16) - 100.0% confidence
+- Gonzaga (8) def. Georgia (9) - 95.2% confidence
+- Clemson (5) def. McNeese (12) - 99.5% confidence
+- Purdue (4) def. High Point (13) - 99.9% confidence
+- Illinois (6) def. TCU (11) - 84.8% confidence
+- Kentucky (3) def. Troy (14) - 99.4% confidence
+- Utah State (10) def. UCLA (7) - 77.6% confidence
+- Tennessee (2) def. Wofford (15) - 100.0% confidence
+
+Second Round:
+- Houston (1) def. Gonzaga (8) - 94.0% confidence
+- Purdue (4) def. Clemson (5) - 94.4% confidence
+- Illinois (6) def. Kentucky (3) - 70.2% confidence
+- Tennessee (2) def. Utah State (10) - 96.9% confidence
+
+Sweet Sixteen:
+- Houston (1) def. Purdue (4) - 94.0% confidence
+- Tennessee (2) def. Illinois (6) - 96.9% confidence
+
+Elite Eight:
+- Houston (1) def. Tennessee (2) - 94.0% confidence
+
+NOTES
+-----
+- All confidence percentages are based on historical performance data and team statistics
+- Seed numbers are shown in parentheses after each team name
+- Upsets are highlighted in the detailed round-by-round predictions
+- Historical performance data was used to inform the predictions 
