@@ -1,0 +1,449 @@
+year,round,region,team1,team2,seed1,seed2,winner,team1_win
+2010,First Round,East,Gonzaga (2010),Georgia State (2010),1,16,Gonzaga (2010),True
+2010,First Round,East,Duke (2010),Saint Peter's (2010),2,15,Saint Peter's (2010),False
+2010,First Round,East,Tennessee (2010),Montana State (2010),3,14,Montana State (2010),False
+2010,First Round,East,UCLA (2010),Vermont (2010),4,13,Vermont (2010),False
+2010,First Round,East,Houston (2010),New Mexico State (2010),5,12,Houston (2010),True
+2010,First Round,East,Alabama (2010),Notre Dame (2010),6,11,Alabama (2010),True
+2010,First Round,East,Michigan State (2010),Miami (2010),7,10,Michigan State (2010),True
+2010,First Round,East,North Carolina (2010),Marquette (2010),8,9,North Carolina (2010),True
+2010,First Round,West,Kansas (2010),Norfolk State (2010),1,16,Kansas (2010),True
+2010,First Round,West,Kentucky (2010),CSU Fullerton (2010),2,15,Kentucky (2010),True
+2010,First Round,West,Texas Tech (2010),Yale (2010),3,14,Texas Tech (2010),True
+2010,First Round,West,Arkansas (2010),South Dakota State (2010),4,13,Arkansas (2010),True
+2010,First Round,West,Saint Mary's (2010),Richmond (2010),5,12,Richmond (2010),False
+2010,First Round,West,Texas (2010),Virginia Tech (2010),6,11,Texas (2010),True
+2010,First Round,West,Ohio State (2010),Davidson (2010),7,10,Davidson (2010),False
+2010,First Round,West,Boise State (2010),Memphis (2010),8,9,Memphis (2010),False
+2010,First Round,South,Baylor (2010),Wright State (2010),1,16,Wright State (2010),False
+2010,First Round,South,Auburn (2010),Jacksonville State (2010),2,15,Auburn (2010),True
+2010,First Round,South,Purdue (2010),Colgate (2010),3,14,Colgate (2010),False
+2010,First Round,South,Illinois (2010),Chattanooga (2010),4,13,Illinois (2010),True
+2010,First Round,South,Iowa (2010),UAB (2010),5,12,Iowa (2010),True
+2010,First Round,South,LSU (2010),Iowa State (2010),6,11,LSU (2010),True
+2010,First Round,South,USC (2010),Loyola Chicago (2010),7,10,USC (2010),True
+2010,First Round,South,San Diego State (2010),Creighton (2010),8,9,San Diego State (2010),True
+2010,First Round,Midwest,Arizona (2010),Bryant (2010),1,16,Bryant (2010),False
+2010,First Round,Midwest,Villanova (2010),Delaware (2010),2,15,Villanova (2010),True
+2010,First Round,Midwest,Wisconsin (2010),Longwood (2010),3,14,Wisconsin (2010),True
+2010,First Round,Midwest,Providence (2010),Akron (2010),4,13,Providence (2010),True
+2010,First Round,Midwest,Connecticut (2010),Indiana (2010),5,12,Connecticut (2010),True
+2010,First Round,Midwest,Colorado State (2010),Michigan (2010),6,11,Colorado State (2010),True
+2010,First Round,Midwest,Murray State (2010),San Francisco (2010),7,10,San Francisco (2010),False
+2010,First Round,Midwest,Seton Hall (2010),TCU (2010),8,9,Seton Hall (2010),True
+2011,First Round,East,Gonzaga (2011),Georgia State (2011),1,16,Georgia State (2011),False
+2011,First Round,East,Duke (2011),Saint Peter's (2011),2,15,Duke (2011),True
+2011,First Round,East,Tennessee (2011),Montana State (2011),3,14,Tennessee (2011),True
+2011,First Round,East,UCLA (2011),Vermont (2011),4,13,UCLA (2011),True
+2011,First Round,East,Houston (2011),New Mexico State (2011),5,12,Houston (2011),True
+2011,First Round,East,Alabama (2011),Notre Dame (2011),6,11,Alabama (2011),True
+2011,First Round,East,Michigan State (2011),Miami (2011),7,10,Michigan State (2011),True
+2011,First Round,East,North Carolina (2011),Marquette (2011),8,9,North Carolina (2011),True
+2011,First Round,West,Kansas (2011),Norfolk State (2011),1,16,Norfolk State (2011),False
+2011,First Round,West,Kentucky (2011),CSU Fullerton (2011),2,15,Kentucky (2011),True
+2011,First Round,West,Texas Tech (2011),Yale (2011),3,14,Texas Tech (2011),True
+2011,First Round,West,Arkansas (2011),South Dakota State (2011),4,13,South Dakota State (2011),False
+2011,First Round,West,Saint Mary's (2011),Richmond (2011),5,12,Saint Mary's (2011),True
+2011,First Round,West,Texas (2011),Virginia Tech (2011),6,11,Texas (2011),True
+2011,First Round,West,Ohio State (2011),Davidson (2011),7,10,Ohio State (2011),True
+2011,First Round,West,Boise State (2011),Memphis (2011),8,9,Boise State (2011),True
+2011,First Round,South,Baylor (2011),Wright State (2011),1,16,Baylor (2011),True
+2011,First Round,South,Auburn (2011),Jacksonville State (2011),2,15,Auburn (2011),True
+2011,First Round,South,Purdue (2011),Colgate (2011),3,14,Colgate (2011),False
+2011,First Round,South,Illinois (2011),Chattanooga (2011),4,13,Illinois (2011),True
+2011,First Round,South,Iowa (2011),UAB (2011),5,12,Iowa (2011),True
+2011,First Round,South,LSU (2011),Iowa State (2011),6,11,LSU (2011),True
+2011,First Round,South,USC (2011),Loyola Chicago (2011),7,10,Loyola Chicago (2011),False
+2011,First Round,South,San Diego State (2011),Creighton (2011),8,9,Creighton (2011),False
+2011,First Round,Midwest,Arizona (2011),Bryant (2011),1,16,Arizona (2011),True
+2011,First Round,Midwest,Villanova (2011),Delaware (2011),2,15,Delaware (2011),False
+2011,First Round,Midwest,Wisconsin (2011),Longwood (2011),3,14,Wisconsin (2011),True
+2011,First Round,Midwest,Providence (2011),Akron (2011),4,13,Akron (2011),False
+2011,First Round,Midwest,Connecticut (2011),Indiana (2011),5,12,Connecticut (2011),True
+2011,First Round,Midwest,Colorado State (2011),Michigan (2011),6,11,Colorado State (2011),True
+2011,First Round,Midwest,Murray State (2011),San Francisco (2011),7,10,San Francisco (2011),False
+2011,First Round,Midwest,Seton Hall (2011),TCU (2011),8,9,TCU (2011),False
+2012,First Round,East,Gonzaga (2012),Georgia State (2012),1,16,Georgia State (2012),False
+2012,First Round,East,Duke (2012),Saint Peter's (2012),2,15,Duke (2012),True
+2012,First Round,East,Tennessee (2012),Montana State (2012),3,14,Montana State (2012),False
+2012,First Round,East,UCLA (2012),Vermont (2012),4,13,UCLA (2012),True
+2012,First Round,East,Houston (2012),New Mexico State (2012),5,12,Houston (2012),True
+2012,First Round,East,Alabama (2012),Notre Dame (2012),6,11,Alabama (2012),True
+2012,First Round,East,Michigan State (2012),Miami (2012),7,10,Miami (2012),False
+2012,First Round,East,North Carolina (2012),Marquette (2012),8,9,North Carolina (2012),True
+2012,First Round,West,Kansas (2012),Norfolk State (2012),1,16,Norfolk State (2012),False
+2012,First Round,West,Kentucky (2012),CSU Fullerton (2012),2,15,Kentucky (2012),True
+2012,First Round,West,Texas Tech (2012),Yale (2012),3,14,Texas Tech (2012),True
+2012,First Round,West,Arkansas (2012),South Dakota State (2012),4,13,Arkansas (2012),True
+2012,First Round,West,Saint Mary's (2012),Richmond (2012),5,12,Richmond (2012),False
+2012,First Round,West,Texas (2012),Virginia Tech (2012),6,11,Texas (2012),True
+2012,First Round,West,Ohio State (2012),Davidson (2012),7,10,Ohio State (2012),True
+2012,First Round,West,Boise State (2012),Memphis (2012),8,9,Boise State (2012),True
+2012,First Round,South,Baylor (2012),Wright State (2012),1,16,Baylor (2012),True
+2012,First Round,South,Auburn (2012),Jacksonville State (2012),2,15,Auburn (2012),True
+2012,First Round,South,Purdue (2012),Colgate (2012),3,14,Purdue (2012),True
+2012,First Round,South,Illinois (2012),Chattanooga (2012),4,13,Chattanooga (2012),False
+2012,First Round,South,Iowa (2012),UAB (2012),5,12,Iowa (2012),True
+2012,First Round,South,LSU (2012),Iowa State (2012),6,11,Iowa State (2012),False
+2012,First Round,South,USC (2012),Loyola Chicago (2012),7,10,Loyola Chicago (2012),False
+2012,First Round,South,San Diego State (2012),Creighton (2012),8,9,San Diego State (2012),True
+2012,First Round,Midwest,Arizona (2012),Bryant (2012),1,16,Arizona (2012),True
+2012,First Round,Midwest,Villanova (2012),Delaware (2012),2,15,Delaware (2012),False
+2012,First Round,Midwest,Wisconsin (2012),Longwood (2012),3,14,Wisconsin (2012),True
+2012,First Round,Midwest,Providence (2012),Akron (2012),4,13,Providence (2012),True
+2012,First Round,Midwest,Connecticut (2012),Indiana (2012),5,12,Connecticut (2012),True
+2012,First Round,Midwest,Colorado State (2012),Michigan (2012),6,11,Michigan (2012),False
+2012,First Round,Midwest,Murray State (2012),San Francisco (2012),7,10,Murray State (2012),True
+2012,First Round,Midwest,Seton Hall (2012),TCU (2012),8,9,Seton Hall (2012),True
+2013,First Round,East,Gonzaga (2013),Georgia State (2013),1,16,Gonzaga (2013),True
+2013,First Round,East,Duke (2013),Saint Peter's (2013),2,15,Duke (2013),True
+2013,First Round,East,Tennessee (2013),Montana State (2013),3,14,Tennessee (2013),True
+2013,First Round,East,UCLA (2013),Vermont (2013),4,13,Vermont (2013),False
+2013,First Round,East,Houston (2013),New Mexico State (2013),5,12,Houston (2013),True
+2013,First Round,East,Alabama (2013),Notre Dame (2013),6,11,Alabama (2013),True
+2013,First Round,East,Michigan State (2013),Miami (2013),7,10,Miami (2013),False
+2013,First Round,East,North Carolina (2013),Marquette (2013),8,9,North Carolina (2013),True
+2013,First Round,West,Kansas (2013),Norfolk State (2013),1,16,Kansas (2013),True
+2013,First Round,West,Kentucky (2013),CSU Fullerton (2013),2,15,Kentucky (2013),True
+2013,First Round,West,Texas Tech (2013),Yale (2013),3,14,Yale (2013),False
+2013,First Round,West,Arkansas (2013),South Dakota State (2013),4,13,Arkansas (2013),True
+2013,First Round,West,Saint Mary's (2013),Richmond (2013),5,12,Saint Mary's (2013),True
+2013,First Round,West,Texas (2013),Virginia Tech (2013),6,11,Texas (2013),True
+2013,First Round,West,Ohio State (2013),Davidson (2013),7,10,Davidson (2013),False
+2013,First Round,West,Boise State (2013),Memphis (2013),8,9,Boise State (2013),True
+2013,First Round,South,Baylor (2013),Wright State (2013),1,16,Baylor (2013),True
+2013,First Round,South,Auburn (2013),Jacksonville State (2013),2,15,Jacksonville State (2013),False
+2013,First Round,South,Purdue (2013),Colgate (2013),3,14,Purdue (2013),True
+2013,First Round,South,Illinois (2013),Chattanooga (2013),4,13,Illinois (2013),True
+2013,First Round,South,Iowa (2013),UAB (2013),5,12,Iowa (2013),True
+2013,First Round,South,LSU (2013),Iowa State (2013),6,11,LSU (2013),True
+2013,First Round,South,USC (2013),Loyola Chicago (2013),7,10,USC (2013),True
+2013,First Round,South,San Diego State (2013),Creighton (2013),8,9,San Diego State (2013),True
+2013,First Round,Midwest,Arizona (2013),Bryant (2013),1,16,Bryant (2013),False
+2013,First Round,Midwest,Villanova (2013),Delaware (2013),2,15,Delaware (2013),False
+2013,First Round,Midwest,Wisconsin (2013),Longwood (2013),3,14,Wisconsin (2013),True
+2013,First Round,Midwest,Providence (2013),Akron (2013),4,13,Providence (2013),True
+2013,First Round,Midwest,Connecticut (2013),Indiana (2013),5,12,Connecticut (2013),True
+2013,First Round,Midwest,Colorado State (2013),Michigan (2013),6,11,Colorado State (2013),True
+2013,First Round,Midwest,Murray State (2013),San Francisco (2013),7,10,Murray State (2013),True
+2013,First Round,Midwest,Seton Hall (2013),TCU (2013),8,9,Seton Hall (2013),True
+2014,First Round,East,Gonzaga (2014),Georgia State (2014),1,16,Georgia State (2014),False
+2014,First Round,East,Duke (2014),Saint Peter's (2014),2,15,Saint Peter's (2014),False
+2014,First Round,East,Tennessee (2014),Montana State (2014),3,14,Montana State (2014),False
+2014,First Round,East,UCLA (2014),Vermont (2014),4,13,Vermont (2014),False
+2014,First Round,East,Houston (2014),New Mexico State (2014),5,12,Houston (2014),True
+2014,First Round,East,Alabama (2014),Notre Dame (2014),6,11,Alabama (2014),True
+2014,First Round,East,Michigan State (2014),Miami (2014),7,10,Michigan State (2014),True
+2014,First Round,East,North Carolina (2014),Marquette (2014),8,9,North Carolina (2014),True
+2014,First Round,West,Kansas (2014),Norfolk State (2014),1,16,Kansas (2014),True
+2014,First Round,West,Kentucky (2014),CSU Fullerton (2014),2,15,CSU Fullerton (2014),False
+2014,First Round,West,Texas Tech (2014),Yale (2014),3,14,Yale (2014),False
+2014,First Round,West,Arkansas (2014),South Dakota State (2014),4,13,South Dakota State (2014),False
+2014,First Round,West,Saint Mary's (2014),Richmond (2014),5,12,Richmond (2014),False
+2014,First Round,West,Texas (2014),Virginia Tech (2014),6,11,Texas (2014),True
+2014,First Round,West,Ohio State (2014),Davidson (2014),7,10,Ohio State (2014),True
+2014,First Round,West,Boise State (2014),Memphis (2014),8,9,Boise State (2014),True
+2014,First Round,South,Baylor (2014),Wright State (2014),1,16,Wright State (2014),False
+2014,First Round,South,Auburn (2014),Jacksonville State (2014),2,15,Jacksonville State (2014),False
+2014,First Round,South,Purdue (2014),Colgate (2014),3,14,Purdue (2014),True
+2014,First Round,South,Illinois (2014),Chattanooga (2014),4,13,Illinois (2014),True
+2014,First Round,South,Iowa (2014),UAB (2014),5,12,Iowa (2014),True
+2014,First Round,South,LSU (2014),Iowa State (2014),6,11,Iowa State (2014),False
+2014,First Round,South,USC (2014),Loyola Chicago (2014),7,10,USC (2014),True
+2014,First Round,South,San Diego State (2014),Creighton (2014),8,9,San Diego State (2014),True
+2014,First Round,Midwest,Arizona (2014),Bryant (2014),1,16,Arizona (2014),True
+2014,First Round,Midwest,Villanova (2014),Delaware (2014),2,15,Villanova (2014),True
+2014,First Round,Midwest,Wisconsin (2014),Longwood (2014),3,14,Wisconsin (2014),True
+2014,First Round,Midwest,Providence (2014),Akron (2014),4,13,Providence (2014),True
+2014,First Round,Midwest,Connecticut (2014),Indiana (2014),5,12,Connecticut (2014),True
+2014,First Round,Midwest,Colorado State (2014),Michigan (2014),6,11,Colorado State (2014),True
+2014,First Round,Midwest,Murray State (2014),San Francisco (2014),7,10,Murray State (2014),True
+2014,First Round,Midwest,Seton Hall (2014),TCU (2014),8,9,Seton Hall (2014),True
+2015,First Round,East,Gonzaga (2015),Georgia State (2015),1,16,Georgia State (2015),False
+2015,First Round,East,Duke (2015),Saint Peter's (2015),2,15,Saint Peter's (2015),False
+2015,First Round,East,Tennessee (2015),Montana State (2015),3,14,Tennessee (2015),True
+2015,First Round,East,UCLA (2015),Vermont (2015),4,13,UCLA (2015),True
+2015,First Round,East,Houston (2015),New Mexico State (2015),5,12,Houston (2015),True
+2015,First Round,East,Alabama (2015),Notre Dame (2015),6,11,Alabama (2015),True
+2015,First Round,East,Michigan State (2015),Miami (2015),7,10,Michigan State (2015),True
+2015,First Round,East,North Carolina (2015),Marquette (2015),8,9,Marquette (2015),False
+2015,First Round,West,Kansas (2015),Norfolk State (2015),1,16,Kansas (2015),True
+2015,First Round,West,Kentucky (2015),CSU Fullerton (2015),2,15,Kentucky (2015),True
+2015,First Round,West,Texas Tech (2015),Yale (2015),3,14,Texas Tech (2015),True
+2015,First Round,West,Arkansas (2015),South Dakota State (2015),4,13,South Dakota State (2015),False
+2015,First Round,West,Saint Mary's (2015),Richmond (2015),5,12,Saint Mary's (2015),True
+2015,First Round,West,Texas (2015),Virginia Tech (2015),6,11,Texas (2015),True
+2015,First Round,West,Ohio State (2015),Davidson (2015),7,10,Ohio State (2015),True
+2015,First Round,West,Boise State (2015),Memphis (2015),8,9,Boise State (2015),True
+2015,First Round,South,Baylor (2015),Wright State (2015),1,16,Wright State (2015),False
+2015,First Round,South,Auburn (2015),Jacksonville State (2015),2,15,Jacksonville State (2015),False
+2015,First Round,South,Purdue (2015),Colgate (2015),3,14,Colgate (2015),False
+2015,First Round,South,Illinois (2015),Chattanooga (2015),4,13,Illinois (2015),True
+2015,First Round,South,Iowa (2015),UAB (2015),5,12,Iowa (2015),True
+2015,First Round,South,LSU (2015),Iowa State (2015),6,11,LSU (2015),True
+2015,First Round,South,USC (2015),Loyola Chicago (2015),7,10,USC (2015),True
+2015,First Round,South,San Diego State (2015),Creighton (2015),8,9,Creighton (2015),False
+2015,First Round,Midwest,Arizona (2015),Bryant (2015),1,16,Bryant (2015),False
+2015,First Round,Midwest,Villanova (2015),Delaware (2015),2,15,Villanova (2015),True
+2015,First Round,Midwest,Wisconsin (2015),Longwood (2015),3,14,Wisconsin (2015),True
+2015,First Round,Midwest,Providence (2015),Akron (2015),4,13,Akron (2015),False
+2015,First Round,Midwest,Connecticut (2015),Indiana (2015),5,12,Indiana (2015),False
+2015,First Round,Midwest,Colorado State (2015),Michigan (2015),6,11,Colorado State (2015),True
+2015,First Round,Midwest,Murray State (2015),San Francisco (2015),7,10,San Francisco (2015),False
+2015,First Round,Midwest,Seton Hall (2015),TCU (2015),8,9,Seton Hall (2015),True
+2016,First Round,East,Gonzaga (2016),Georgia State (2016),1,16,Gonzaga (2016),True
+2016,First Round,East,Duke (2016),Saint Peter's (2016),2,15,Saint Peter's (2016),False
+2016,First Round,East,Tennessee (2016),Montana State (2016),3,14,Montana State (2016),False
+2016,First Round,East,UCLA (2016),Vermont (2016),4,13,Vermont (2016),False
+2016,First Round,East,Houston (2016),New Mexico State (2016),5,12,Houston (2016),True
+2016,First Round,East,Alabama (2016),Notre Dame (2016),6,11,Alabama (2016),True
+2016,First Round,East,Michigan State (2016),Miami (2016),7,10,Miami (2016),False
+2016,First Round,East,North Carolina (2016),Marquette (2016),8,9,North Carolina (2016),True
+2016,First Round,West,Kansas (2016),Norfolk State (2016),1,16,Norfolk State (2016),False
+2016,First Round,West,Kentucky (2016),CSU Fullerton (2016),2,15,Kentucky (2016),True
+2016,First Round,West,Texas Tech (2016),Yale (2016),3,14,Yale (2016),False
+2016,First Round,West,Arkansas (2016),South Dakota State (2016),4,13,South Dakota State (2016),False
+2016,First Round,West,Saint Mary's (2016),Richmond (2016),5,12,Saint Mary's (2016),True
+2016,First Round,West,Texas (2016),Virginia Tech (2016),6,11,Virginia Tech (2016),False
+2016,First Round,West,Ohio State (2016),Davidson (2016),7,10,Ohio State (2016),True
+2016,First Round,West,Boise State (2016),Memphis (2016),8,9,Memphis (2016),False
+2016,First Round,South,Baylor (2016),Wright State (2016),1,16,Baylor (2016),True
+2016,First Round,South,Auburn (2016),Jacksonville State (2016),2,15,Auburn (2016),True
+2016,First Round,South,Purdue (2016),Colgate (2016),3,14,Purdue (2016),True
+2016,First Round,South,Illinois (2016),Chattanooga (2016),4,13,Illinois (2016),True
+2016,First Round,South,Iowa (2016),UAB (2016),5,12,UAB (2016),False
+2016,First Round,South,LSU (2016),Iowa State (2016),6,11,LSU (2016),True
+2016,First Round,South,USC (2016),Loyola Chicago (2016),7,10,USC (2016),True
+2016,First Round,South,San Diego State (2016),Creighton (2016),8,9,San Diego State (2016),True
+2016,First Round,Midwest,Arizona (2016),Bryant (2016),1,16,Bryant (2016),False
+2016,First Round,Midwest,Villanova (2016),Delaware (2016),2,15,Delaware (2016),False
+2016,First Round,Midwest,Wisconsin (2016),Longwood (2016),3,14,Wisconsin (2016),True
+2016,First Round,Midwest,Providence (2016),Akron (2016),4,13,Akron (2016),False
+2016,First Round,Midwest,Connecticut (2016),Indiana (2016),5,12,Connecticut (2016),True
+2016,First Round,Midwest,Colorado State (2016),Michigan (2016),6,11,Colorado State (2016),True
+2016,First Round,Midwest,Murray State (2016),San Francisco (2016),7,10,Murray State (2016),True
+2016,First Round,Midwest,Seton Hall (2016),TCU (2016),8,9,Seton Hall (2016),True
+2017,First Round,East,Gonzaga (2017),Georgia State (2017),1,16,Gonzaga (2017),True
+2017,First Round,East,Duke (2017),Saint Peter's (2017),2,15,Duke (2017),True
+2017,First Round,East,Tennessee (2017),Montana State (2017),3,14,Tennessee (2017),True
+2017,First Round,East,UCLA (2017),Vermont (2017),4,13,Vermont (2017),False
+2017,First Round,East,Houston (2017),New Mexico State (2017),5,12,Houston (2017),True
+2017,First Round,East,Alabama (2017),Notre Dame (2017),6,11,Notre Dame (2017),False
+2017,First Round,East,Michigan State (2017),Miami (2017),7,10,Michigan State (2017),True
+2017,First Round,East,North Carolina (2017),Marquette (2017),8,9,Marquette (2017),False
+2017,First Round,West,Kansas (2017),Norfolk State (2017),1,16,Norfolk State (2017),False
+2017,First Round,West,Kentucky (2017),CSU Fullerton (2017),2,15,Kentucky (2017),True
+2017,First Round,West,Texas Tech (2017),Yale (2017),3,14,Texas Tech (2017),True
+2017,First Round,West,Arkansas (2017),South Dakota State (2017),4,13,Arkansas (2017),True
+2017,First Round,West,Saint Mary's (2017),Richmond (2017),5,12,Saint Mary's (2017),True
+2017,First Round,West,Texas (2017),Virginia Tech (2017),6,11,Texas (2017),True
+2017,First Round,West,Ohio State (2017),Davidson (2017),7,10,Ohio State (2017),True
+2017,First Round,West,Boise State (2017),Memphis (2017),8,9,Boise State (2017),True
+2017,First Round,South,Baylor (2017),Wright State (2017),1,16,Baylor (2017),True
+2017,First Round,South,Auburn (2017),Jacksonville State (2017),2,15,Auburn (2017),True
+2017,First Round,South,Purdue (2017),Colgate (2017),3,14,Purdue (2017),True
+2017,First Round,South,Illinois (2017),Chattanooga (2017),4,13,Illinois (2017),True
+2017,First Round,South,Iowa (2017),UAB (2017),5,12,Iowa (2017),True
+2017,First Round,South,LSU (2017),Iowa State (2017),6,11,LSU (2017),True
+2017,First Round,South,USC (2017),Loyola Chicago (2017),7,10,USC (2017),True
+2017,First Round,South,San Diego State (2017),Creighton (2017),8,9,San Diego State (2017),True
+2017,First Round,Midwest,Arizona (2017),Bryant (2017),1,16,Arizona (2017),True
+2017,First Round,Midwest,Villanova (2017),Delaware (2017),2,15,Delaware (2017),False
+2017,First Round,Midwest,Wisconsin (2017),Longwood (2017),3,14,Longwood (2017),False
+2017,First Round,Midwest,Providence (2017),Akron (2017),4,13,Providence (2017),True
+2017,First Round,Midwest,Connecticut (2017),Indiana (2017),5,12,Connecticut (2017),True
+2017,First Round,Midwest,Colorado State (2017),Michigan (2017),6,11,Michigan (2017),False
+2017,First Round,Midwest,Murray State (2017),San Francisco (2017),7,10,Murray State (2017),True
+2017,First Round,Midwest,Seton Hall (2017),TCU (2017),8,9,Seton Hall (2017),True
+2018,First Round,East,Gonzaga (2018),Georgia State (2018),1,16,Gonzaga (2018),True
+2018,First Round,East,Duke (2018),Saint Peter's (2018),2,15,Duke (2018),True
+2018,First Round,East,Tennessee (2018),Montana State (2018),3,14,Montana State (2018),False
+2018,First Round,East,UCLA (2018),Vermont (2018),4,13,Vermont (2018),False
+2018,First Round,East,Houston (2018),New Mexico State (2018),5,12,Houston (2018),True
+2018,First Round,East,Alabama (2018),Notre Dame (2018),6,11,Notre Dame (2018),False
+2018,First Round,East,Michigan State (2018),Miami (2018),7,10,Miami (2018),False
+2018,First Round,East,North Carolina (2018),Marquette (2018),8,9,North Carolina (2018),True
+2018,First Round,West,Kansas (2018),Norfolk State (2018),1,16,Kansas (2018),True
+2018,First Round,West,Kentucky (2018),CSU Fullerton (2018),2,15,Kentucky (2018),True
+2018,First Round,West,Texas Tech (2018),Yale (2018),3,14,Yale (2018),False
+2018,First Round,West,Arkansas (2018),South Dakota State (2018),4,13,Arkansas (2018),True
+2018,First Round,West,Saint Mary's (2018),Richmond (2018),5,12,Saint Mary's (2018),True
+2018,First Round,West,Texas (2018),Virginia Tech (2018),6,11,Texas (2018),True
+2018,First Round,West,Ohio State (2018),Davidson (2018),7,10,Ohio State (2018),True
+2018,First Round,West,Boise State (2018),Memphis (2018),8,9,Boise State (2018),True
+2018,First Round,South,Baylor (2018),Wright State (2018),1,16,Wright State (2018),False
+2018,First Round,South,Auburn (2018),Jacksonville State (2018),2,15,Jacksonville State (2018),False
+2018,First Round,South,Purdue (2018),Colgate (2018),3,14,Purdue (2018),True
+2018,First Round,South,Illinois (2018),Chattanooga (2018),4,13,Illinois (2018),True
+2018,First Round,South,Iowa (2018),UAB (2018),5,12,UAB (2018),False
+2018,First Round,South,LSU (2018),Iowa State (2018),6,11,LSU (2018),True
+2018,First Round,South,USC (2018),Loyola Chicago (2018),7,10,USC (2018),True
+2018,First Round,South,San Diego State (2018),Creighton (2018),8,9,Creighton (2018),False
+2018,First Round,Midwest,Arizona (2018),Bryant (2018),1,16,Arizona (2018),True
+2018,First Round,Midwest,Villanova (2018),Delaware (2018),2,15,Delaware (2018),False
+2018,First Round,Midwest,Wisconsin (2018),Longwood (2018),3,14,Wisconsin (2018),True
+2018,First Round,Midwest,Providence (2018),Akron (2018),4,13,Providence (2018),True
+2018,First Round,Midwest,Connecticut (2018),Indiana (2018),5,12,Connecticut (2018),True
+2018,First Round,Midwest,Colorado State (2018),Michigan (2018),6,11,Colorado State (2018),True
+2018,First Round,Midwest,Murray State (2018),San Francisco (2018),7,10,Murray State (2018),True
+2018,First Round,Midwest,Seton Hall (2018),TCU (2018),8,9,Seton Hall (2018),True
+2019,First Round,East,Gonzaga (2019),Georgia State (2019),1,16,Gonzaga (2019),True
+2019,First Round,East,Duke (2019),Saint Peter's (2019),2,15,Duke (2019),True
+2019,First Round,East,Tennessee (2019),Montana State (2019),3,14,Tennessee (2019),True
+2019,First Round,East,UCLA (2019),Vermont (2019),4,13,UCLA (2019),True
+2019,First Round,East,Houston (2019),New Mexico State (2019),5,12,Houston (2019),True
+2019,First Round,East,Alabama (2019),Notre Dame (2019),6,11,Alabama (2019),True
+2019,First Round,East,Michigan State (2019),Miami (2019),7,10,Michigan State (2019),True
+2019,First Round,East,North Carolina (2019),Marquette (2019),8,9,North Carolina (2019),True
+2019,First Round,West,Kansas (2019),Norfolk State (2019),1,16,Kansas (2019),True
+2019,First Round,West,Kentucky (2019),CSU Fullerton (2019),2,15,CSU Fullerton (2019),False
+2019,First Round,West,Texas Tech (2019),Yale (2019),3,14,Yale (2019),False
+2019,First Round,West,Arkansas (2019),South Dakota State (2019),4,13,South Dakota State (2019),False
+2019,First Round,West,Saint Mary's (2019),Richmond (2019),5,12,Saint Mary's (2019),True
+2019,First Round,West,Texas (2019),Virginia Tech (2019),6,11,Texas (2019),True
+2019,First Round,West,Ohio State (2019),Davidson (2019),7,10,Ohio State (2019),True
+2019,First Round,West,Boise State (2019),Memphis (2019),8,9,Memphis (2019),False
+2019,First Round,South,Baylor (2019),Wright State (2019),1,16,Wright State (2019),False
+2019,First Round,South,Auburn (2019),Jacksonville State (2019),2,15,Jacksonville State (2019),False
+2019,First Round,South,Purdue (2019),Colgate (2019),3,14,Colgate (2019),False
+2019,First Round,South,Illinois (2019),Chattanooga (2019),4,13,Illinois (2019),True
+2019,First Round,South,Iowa (2019),UAB (2019),5,12,Iowa (2019),True
+2019,First Round,South,LSU (2019),Iowa State (2019),6,11,LSU (2019),True
+2019,First Round,South,USC (2019),Loyola Chicago (2019),7,10,USC (2019),True
+2019,First Round,South,San Diego State (2019),Creighton (2019),8,9,San Diego State (2019),True
+2019,First Round,Midwest,Arizona (2019),Bryant (2019),1,16,Arizona (2019),True
+2019,First Round,Midwest,Villanova (2019),Delaware (2019),2,15,Villanova (2019),True
+2019,First Round,Midwest,Wisconsin (2019),Longwood (2019),3,14,Wisconsin (2019),True
+2019,First Round,Midwest,Providence (2019),Akron (2019),4,13,Providence (2019),True
+2019,First Round,Midwest,Connecticut (2019),Indiana (2019),5,12,Connecticut (2019),True
+2019,First Round,Midwest,Colorado State (2019),Michigan (2019),6,11,Colorado State (2019),True
+2019,First Round,Midwest,Murray State (2019),San Francisco (2019),7,10,Murray State (2019),True
+2019,First Round,Midwest,Seton Hall (2019),TCU (2019),8,9,TCU (2019),False
+2021,First Round,East,Gonzaga (2021),Georgia State (2021),1,16,Gonzaga (2021),True
+2021,First Round,East,Duke (2021),Saint Peter's (2021),2,15,Saint Peter's (2021),False
+2021,First Round,East,Tennessee (2021),Montana State (2021),3,14,Montana State (2021),False
+2021,First Round,East,UCLA (2021),Vermont (2021),4,13,UCLA (2021),True
+2021,First Round,East,Houston (2021),New Mexico State (2021),5,12,Houston (2021),True
+2021,First Round,East,Alabama (2021),Notre Dame (2021),6,11,Notre Dame (2021),False
+2021,First Round,East,Michigan State (2021),Miami (2021),7,10,Miami (2021),False
+2021,First Round,East,North Carolina (2021),Marquette (2021),8,9,North Carolina (2021),True
+2021,First Round,West,Kansas (2021),Norfolk State (2021),1,16,Kansas (2021),True
+2021,First Round,West,Kentucky (2021),CSU Fullerton (2021),2,15,Kentucky (2021),True
+2021,First Round,West,Texas Tech (2021),Yale (2021),3,14,Texas Tech (2021),True
+2021,First Round,West,Arkansas (2021),South Dakota State (2021),4,13,Arkansas (2021),True
+2021,First Round,West,Saint Mary's (2021),Richmond (2021),5,12,Richmond (2021),False
+2021,First Round,West,Texas (2021),Virginia Tech (2021),6,11,Texas (2021),True
+2021,First Round,West,Ohio State (2021),Davidson (2021),7,10,Ohio State (2021),True
+2021,First Round,West,Boise State (2021),Memphis (2021),8,9,Boise State (2021),True
+2021,First Round,South,Baylor (2021),Wright State (2021),1,16,Wright State (2021),False
+2021,First Round,South,Auburn (2021),Jacksonville State (2021),2,15,Auburn (2021),True
+2021,First Round,South,Purdue (2021),Colgate (2021),3,14,Purdue (2021),True
+2021,First Round,South,Illinois (2021),Chattanooga (2021),4,13,Illinois (2021),True
+2021,First Round,South,Iowa (2021),UAB (2021),5,12,Iowa (2021),True
+2021,First Round,South,LSU (2021),Iowa State (2021),6,11,Iowa State (2021),False
+2021,First Round,South,USC (2021),Loyola Chicago (2021),7,10,USC (2021),True
+2021,First Round,South,San Diego State (2021),Creighton (2021),8,9,San Diego State (2021),True
+2021,First Round,Midwest,Arizona (2021),Bryant (2021),1,16,Arizona (2021),True
+2021,First Round,Midwest,Villanova (2021),Delaware (2021),2,15,Delaware (2021),False
+2021,First Round,Midwest,Wisconsin (2021),Longwood (2021),3,14,Longwood (2021),False
+2021,First Round,Midwest,Providence (2021),Akron (2021),4,13,Providence (2021),True
+2021,First Round,Midwest,Connecticut (2021),Indiana (2021),5,12,Connecticut (2021),True
+2021,First Round,Midwest,Colorado State (2021),Michigan (2021),6,11,Colorado State (2021),True
+2021,First Round,Midwest,Murray State (2021),San Francisco (2021),7,10,Murray State (2021),True
+2021,First Round,Midwest,Seton Hall (2021),TCU (2021),8,9,Seton Hall (2021),True
+2022,First Round,East,Gonzaga (2022),Georgia State (2022),1,16,Georgia State (2022),False
+2022,First Round,East,Duke (2022),Saint Peter's (2022),2,15,Saint Peter's (2022),False
+2022,First Round,East,Tennessee (2022),Montana State (2022),3,14,Montana State (2022),False
+2022,First Round,East,UCLA (2022),Vermont (2022),4,13,Vermont (2022),False
+2022,First Round,East,Houston (2022),New Mexico State (2022),5,12,Houston (2022),True
+2022,First Round,East,Alabama (2022),Notre Dame (2022),6,11,Alabama (2022),True
+2022,First Round,East,Michigan State (2022),Miami (2022),7,10,Michigan State (2022),True
+2022,First Round,East,North Carolina (2022),Marquette (2022),8,9,North Carolina (2022),True
+2022,First Round,West,Kansas (2022),Norfolk State (2022),1,16,Norfolk State (2022),False
+2022,First Round,West,Kentucky (2022),CSU Fullerton (2022),2,15,CSU Fullerton (2022),False
+2022,First Round,West,Texas Tech (2022),Yale (2022),3,14,Texas Tech (2022),True
+2022,First Round,West,Arkansas (2022),South Dakota State (2022),4,13,Arkansas (2022),True
+2022,First Round,West,Saint Mary's (2022),Richmond (2022),5,12,Richmond (2022),False
+2022,First Round,West,Texas (2022),Virginia Tech (2022),6,11,Texas (2022),True
+2022,First Round,West,Ohio State (2022),Davidson (2022),7,10,Davidson (2022),False
+2022,First Round,West,Boise State (2022),Memphis (2022),8,9,Boise State (2022),True
+2022,First Round,South,Baylor (2022),Wright State (2022),1,16,Baylor (2022),True
+2022,First Round,South,Auburn (2022),Jacksonville State (2022),2,15,Auburn (2022),True
+2022,First Round,South,Purdue (2022),Colgate (2022),3,14,Colgate (2022),False
+2022,First Round,South,Illinois (2022),Chattanooga (2022),4,13,Illinois (2022),True
+2022,First Round,South,Iowa (2022),UAB (2022),5,12,Iowa (2022),True
+2022,First Round,South,LSU (2022),Iowa State (2022),6,11,LSU (2022),True
+2022,First Round,South,USC (2022),Loyola Chicago (2022),7,10,USC (2022),True
+2022,First Round,South,San Diego State (2022),Creighton (2022),8,9,San Diego State (2022),True
+2022,First Round,Midwest,Arizona (2022),Bryant (2022),1,16,Bryant (2022),False
+2022,First Round,Midwest,Villanova (2022),Delaware (2022),2,15,Villanova (2022),True
+2022,First Round,Midwest,Wisconsin (2022),Longwood (2022),3,14,Longwood (2022),False
+2022,First Round,Midwest,Providence (2022),Akron (2022),4,13,Providence (2022),True
+2022,First Round,Midwest,Connecticut (2022),Indiana (2022),5,12,Connecticut (2022),True
+2022,First Round,Midwest,Colorado State (2022),Michigan (2022),6,11,Michigan (2022),False
+2022,First Round,Midwest,Murray State (2022),San Francisco (2022),7,10,Murray State (2022),True
+2022,First Round,Midwest,Seton Hall (2022),TCU (2022),8,9,Seton Hall (2022),True
+2023,First Round,East,Gonzaga (2023),Georgia State (2023),1,16,Gonzaga (2023),True
+2023,First Round,East,Duke (2023),Saint Peter's (2023),2,15,Saint Peter's (2023),False
+2023,First Round,East,Tennessee (2023),Montana State (2023),3,14,Montana State (2023),False
+2023,First Round,East,UCLA (2023),Vermont (2023),4,13,Vermont (2023),False
+2023,First Round,East,Houston (2023),New Mexico State (2023),5,12,Houston (2023),True
+2023,First Round,East,Alabama (2023),Notre Dame (2023),6,11,Alabama (2023),True
+2023,First Round,East,Michigan State (2023),Miami (2023),7,10,Miami (2023),False
+2023,First Round,East,North Carolina (2023),Marquette (2023),8,9,North Carolina (2023),True
+2023,First Round,West,Kansas (2023),Norfolk State (2023),1,16,Kansas (2023),True
+2023,First Round,West,Kentucky (2023),CSU Fullerton (2023),2,15,Kentucky (2023),True
+2023,First Round,West,Texas Tech (2023),Yale (2023),3,14,Texas Tech (2023),True
+2023,First Round,West,Arkansas (2023),South Dakota State (2023),4,13,Arkansas (2023),True
+2023,First Round,West,Saint Mary's (2023),Richmond (2023),5,12,Saint Mary's (2023),True
+2023,First Round,West,Texas (2023),Virginia Tech (2023),6,11,Texas (2023),True
+2023,First Round,West,Ohio State (2023),Davidson (2023),7,10,Davidson (2023),False
+2023,First Round,West,Boise State (2023),Memphis (2023),8,9,Boise State (2023),True
+2023,First Round,South,Baylor (2023),Wright State (2023),1,16,Baylor (2023),True
+2023,First Round,South,Auburn (2023),Jacksonville State (2023),2,15,Auburn (2023),True
+2023,First Round,South,Purdue (2023),Colgate (2023),3,14,Colgate (2023),False
+2023,First Round,South,Illinois (2023),Chattanooga (2023),4,13,Chattanooga (2023),False
+2023,First Round,South,Iowa (2023),UAB (2023),5,12,Iowa (2023),True
+2023,First Round,South,LSU (2023),Iowa State (2023),6,11,LSU (2023),True
+2023,First Round,South,USC (2023),Loyola Chicago (2023),7,10,USC (2023),True
+2023,First Round,South,San Diego State (2023),Creighton (2023),8,9,Creighton (2023),False
+2023,First Round,Midwest,Arizona (2023),Bryant (2023),1,16,Bryant (2023),False
+2023,First Round,Midwest,Villanova (2023),Delaware (2023),2,15,Delaware (2023),False
+2023,First Round,Midwest,Wisconsin (2023),Longwood (2023),3,14,Wisconsin (2023),True
+2023,First Round,Midwest,Providence (2023),Akron (2023),4,13,Providence (2023),True
+2023,First Round,Midwest,Connecticut (2023),Indiana (2023),5,12,Indiana (2023),False
+2023,First Round,Midwest,Colorado State (2023),Michigan (2023),6,11,Colorado State (2023),True
+2023,First Round,Midwest,Murray State (2023),San Francisco (2023),7,10,Murray State (2023),True
+2023,First Round,Midwest,Seton Hall (2023),TCU (2023),8,9,Seton Hall (2023),True
+2024,First Round,East,Gonzaga (2024),Georgia State (2024),1,16,Gonzaga (2024),True
+2024,First Round,East,Duke (2024),Saint Peter's (2024),2,15,Saint Peter's (2024),False
+2024,First Round,East,Tennessee (2024),Montana State (2024),3,14,Montana State (2024),False
+2024,First Round,East,UCLA (2024),Vermont (2024),4,13,UCLA (2024),True
+2024,First Round,East,Houston (2024),New Mexico State (2024),5,12,Houston (2024),True
+2024,First Round,East,Alabama (2024),Notre Dame (2024),6,11,Alabama (2024),True
+2024,First Round,East,Michigan State (2024),Miami (2024),7,10,Michigan State (2024),True
+2024,First Round,East,North Carolina (2024),Marquette (2024),8,9,North Carolina (2024),True
+2024,First Round,West,Kansas (2024),Norfolk State (2024),1,16,Kansas (2024),True
+2024,First Round,West,Kentucky (2024),CSU Fullerton (2024),2,15,Kentucky (2024),True
+2024,First Round,West,Texas Tech (2024),Yale (2024),3,14,Yale (2024),False
+2024,First Round,West,Arkansas (2024),South Dakota State (2024),4,13,South Dakota State (2024),False
+2024,First Round,West,Saint Mary's (2024),Richmond (2024),5,12,Saint Mary's (2024),True
+2024,First Round,West,Texas (2024),Virginia Tech (2024),6,11,Texas (2024),True
+2024,First Round,West,Ohio State (2024),Davidson (2024),7,10,Ohio State (2024),True
+2024,First Round,West,Boise State (2024),Memphis (2024),8,9,Boise State (2024),True
+2024,First Round,South,Baylor (2024),Wright State (2024),1,16,Wright State (2024),False
+2024,First Round,South,Auburn (2024),Jacksonville State (2024),2,15,Auburn (2024),True
+2024,First Round,South,Purdue (2024),Colgate (2024),3,14,Purdue (2024),True
+2024,First Round,South,Illinois (2024),Chattanooga (2024),4,13,Chattanooga (2024),False
+2024,First Round,South,Iowa (2024),UAB (2024),5,12,UAB (2024),False
+2024,First Round,South,LSU (2024),Iowa State (2024),6,11,LSU (2024),True
+2024,First Round,South,USC (2024),Loyola Chicago (2024),7,10,Loyola Chicago (2024),False
+2024,First Round,South,San Diego State (2024),Creighton (2024),8,9,San Diego State (2024),True
+2024,First Round,Midwest,Arizona (2024),Bryant (2024),1,16,Bryant (2024),False
+2024,First Round,Midwest,Villanova (2024),Delaware (2024),2,15,Villanova (2024),True
+2024,First Round,Midwest,Wisconsin (2024),Longwood (2024),3,14,Longwood (2024),False
+2024,First Round,Midwest,Providence (2024),Akron (2024),4,13,Providence (2024),True
+2024,First Round,Midwest,Connecticut (2024),Indiana (2024),5,12,Indiana (2024),False
+2024,First Round,Midwest,Colorado State (2024),Michigan (2024),6,11,Colorado State (2024),True
+2024,First Round,Midwest,Murray State (2024),San Francisco (2024),7,10,San Francisco (2024),False
+2024,First Round,Midwest,Seton Hall (2024),TCU (2024),8,9,Seton Hall (2024),True

@@ -12,7 +12,7 @@ def main():
     # South Region
     south_teams = [
         "Auburn",           # 1 seed
-        "Grambling",        # 16 seed
+        "Alabama St",        # 16 seed
         "Louisville",       # 8 seed
         "Creighton",        # 9 seed
         "Michigan",         # 5 seed
@@ -20,7 +20,7 @@ def main():
         "Texas A&M",        # 4 seed
         "Yale",             # 13 seed
         "Ole Miss",         # 6 seed
-        "Virginia",         # 11 seed
+        "North Carolina",   # 11 seed
         "Iowa State",       # 3 seed
         "Lipscomb",         # 14 seed
         "Marquette",        # 7 seed
@@ -34,7 +34,7 @@ def main():
     # East Region
     east_teams = [
         "Duke",             # 1 seed
-        "Merrimack",        # 16 seed
+        "Mount St Mary's",  # 16 seed
         "Mississippi State",# 8 seed
         "Baylor",           # 9 seed
         "Oregon",           # 5 seed
@@ -86,7 +86,7 @@ def main():
         "Purdue",           # 4 seed
         "High Point",       # 13 seed
         "Illinois",         # 6 seed
-        "TCU",              # 11 seed
+        "Xavier",           # 11 seed
         "Kentucky",         # 3 seed
         "Troy",             # 14 seed
         "UCLA",             # 7 seed
@@ -334,9 +334,26 @@ def display_results_for_round(results, round_header):
     
     # Print all results for this round
     print(results[start_idx])  # Print the round header
+    
+    # Count the number of games to show based on the round
+    games_to_show = 0
+    if "Second Round:" in round_header:
+        games_to_show = 4
+    elif "Sweet Sixteen:" in round_header:
+        games_to_show = 2
+    elif "Elite Eight:" in round_header:
+        games_to_show = 1
+    else:
+        games_to_show = float('inf')  # Show all games for other rounds
+    
+    # Print the appropriate number of games
+    game_count = 0
     for i in range(start_idx + 1, next_start_idx):
-        if "National Champion:" not in results[i]:  # Skip the national champion line
+        if "National Champion:" not in results[i] and "wins" in results[i]:
             print(results[i])
+            game_count += 1
+            if game_count >= games_to_show:
+                break
 
 def find_elite_eight_winner(results):
     """Find the winner of the Elite Eight game (regional champion)"""
